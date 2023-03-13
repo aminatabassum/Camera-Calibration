@@ -1,0 +1,25 @@
+go to boson workspace
+lsusb
+ls -lt /dev/video* | head
+roscd boson_sdk_camera_driver/
+ cd params/  ( change parameters , camera name)
+ gedit config.yaml 
+change dev/ camera device name (it would be video4 or 5 sth)
+roslaunch boson_sdk_camera_driver boson.launch 
+rostopic list to check topic being published
+rostopic echo /boson_camera_array/cam_0/image_raw --noarr
+
+----------------------------------
+To visualize images 
+rqt_image_view 
+ ---------------------------
+ To save images
+ cd src/boson_camera_driver/
+ cd src/boson_camera_driver/record_images/
+ mkdir -p ~/datasets/boson_camera_calibration
+cat save_calibration_images.py  (to change path of dataset folder) 
+python3 save_calibration_images.py  (press "a" to save images and "enter" to exit 
+check images as :
+ls ~/datasets/boson_camera_calibration/images_EDT-2022-05-31-15-31-21/image_
+
+
