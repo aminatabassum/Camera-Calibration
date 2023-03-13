@@ -1,0 +1,5 @@
+target_type: 'checkerboard'  #gridtype
+targetCols: 16
+targetRows: 9
+rowSpacingMeters: 0.0808
+colSpacingMeters: 0.0808

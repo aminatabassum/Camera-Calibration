@@ -1,0 +1,22 @@
+Commands for Boson camera
+lsusb
+ls -lt /dev/video* | head
+roscd boson_sdk_camera_driver/
+ cd params/
+ gedit config.yaml 
+roslaunch boson_sdk_camera_driver boson.launch 
+rostopic echo /boson_camera_array/cam_0/image_raw --noarr
+
+----------------------------------
+To visualize images 
+rqt_image_view 
+ ---------------------------
+ To save images
+ cd src/boson_camera_driver/
+ cd src/boson_camera_driver/record_images/
+ mkdir -p ~/datasets/boson_camera_calibration
+ cat save_calibration_images.py 
+python3 save_calibration_images.py 
+ls ~/datasets/boson_camera_calibration/images_EDT-2022-05-31-15-31-21/image_
+
+
