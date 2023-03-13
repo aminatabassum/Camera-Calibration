@@ -1,0 +1,12 @@
+#Accelerometer
+accelerometer_noise_density: 0.0014465395677326909 
+accelerometer_random_walk: 0.00020445717057144449 
+
+#Gyroscope
+gyroscope_noise_density: 9.324115204411544e-05 
+gyroscope_random_walk: 3.5684508057833623e-06 
+
+# rostopic: '/imu/imu_compensated'
+rostopic: '/imu/imu_uncompensated'
+update_rate: 400.0 #Make sure this is correct
+
